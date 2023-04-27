@@ -25,11 +25,19 @@ ul{
     list-style: none;
 }
 
+
+
 /* start nave-bar */
 
 .bg-navebar{
     background-color: #f7f7f7;
+    padding: 0;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
+
 
 .nave-elemnt{
     display: flex;
@@ -40,6 +48,12 @@ ul{
     padding-bottom: 10px;
 }
 
+.left-right{
+    display: flex;
+    gap: 100px;
+    
+}
+
 .right-side{
     display: flex;
     gap: 30px;
@@ -47,11 +61,17 @@ ul{
     text-align: center;
 }
 
+.nave-logo img{
+    width: 100%;
+}
+
 .nave-pages{
     display: flex;
     gap: 20px;
     align-items: center;
     text-align: center;
+    visibility: visible;
+    
 
 }
 .nave-pages .show-items{
@@ -97,8 +117,9 @@ padding-left: 5px;
 }
 .click{
 
-    width: 150px;
-    height: 45px;
+    width: 140px;
+    max-width: 100%;
+    padding: 10px;
     text-align: center;
     border-radius: 25px;
     background-image: linear-gradient(258deg,#5ac99d,#41979a);
@@ -119,6 +140,22 @@ align-items: center;
 justify-content: center;
 
 }
+
+.left-side p span{
+    position: relative;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.left-side p span:hover::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    background-color: grey;
+    bottom: 6px;
+    left: 0;
+    height: 2px;
+}
 .show-items{
     position: relative;
 }
@@ -127,7 +164,7 @@ justify-content: center;
 
 .hide-dive{
     display: flex;
-    gap: 100px;
+    gap: 70px;
     position: absolute;
     top: 33px;
     right:0px;
@@ -136,7 +173,8 @@ justify-content: center;
     opacity:0;
     align-items: center;
     border-radius: 8px;
-    width: 800px;
+    width: 700px;
+    /* max-width: 100%; */
     padding: 15px;
     z-index: 50;
    
@@ -163,11 +201,22 @@ justify-content: center;
   display: flex; 
   align-items: center;
   gap: 10px;
+  width: max-content;
  
   
     
 }
 
+.fatoria-payment .list li a {
+    font-size: 15px;
+} 
+
+
+.fatoria-product p{
+    
+    font-size: 12px;
+
+}
 .list li a svg{
     font-size: 20px;
     text-align: center;
@@ -245,15 +294,28 @@ color: black;
               
         }
 
+    .bar-button{
+    color: white;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border:none;
+    background-image: linear-gradient(258deg,#5ac99d,#41979a);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+}
 
-
-/* start nave-bar */
+/* end nave-bar */
 
  /* start header  */
 
  .bg-header{
     background-image: linear-gradient(258deg,#5ac99d,#41979a);
-    
+    position: relative;
+    padding-bottom: 200px;
  }
 .all-content{
     display: flex;
@@ -299,7 +361,7 @@ color: black;
     gap: 10px;
     background-color: white;
     width: 220px;
-   max-width: 100%;
+     max-width: 100%;
     border-radius: 30px;
     text-align: center;
     align-items: center;
@@ -340,9 +402,12 @@ color: black;
 
 
 .video{
-    
-    margin-top: -150px; 
+    position: absolute;
+    margin-top: -250px; 
     z-index: 60;
+    left: 0;
+    right: 0;
+    margin: a;
      
 }
 
@@ -358,9 +423,6 @@ color: black;
   border-radius: 20px;
   overflow: hidden;
   text-align: center;
-  
-    
-   
   
 }
 
@@ -470,50 +532,65 @@ font-size: 20px;
 
     .bg-users-opinion{
         background-image: linear-gradient(258deg,#5ac99d,#41979a);
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-top: 50px;
+        position: relative;
+       
     }
 
-    .distance-row{
-        margin: 0;
-        padding: 0;
-    }
 
     .users-opinion{
         margin-top: 50px;
         
     }
 
-    .customer-opinion{
-        position: relative;
-    }
-
-    .customer-opinion h1::after{
-        position: absolute;
-        content: "";
-        width: 3px;
-        height: 100%;
-        background-color: white;
-        top: 65px;
-
-        right: 0;
-    }
-
-    .customer-opinion h1{
-        font-size: 50px;
+    .titel-number{
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+        align-items: center;
+        text-align: center;
         color: white;
-        padding-top: 70px;
-        padding-right: 150px;
+       padding-bottom: 20px;
+    }
+
+   .number h1{
+    font-size: 80px;
+   }
+
+   .customer-opinion h1{
+    padding-right: 80px;
+   }
+
+   .customer-opinion h1{
+    font-size: 50px;
+    position: relative;
+   }
+
+   .customer-opinion h1::after{
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    right: 0;
+    
+   }
+
+    .arrow-image img{
+        width: 400px;
+
     }
 
     .arrow-image{
-        position: relative;
+        position: absolute;
+        top: 10px;
+        right: 10px;
     }
-   .arrow-image h1{
-    font-size: 100px;
-        color: white;
-       position: relative;
-        bottom: 230px;
-        z-index: 20;
-   }
+
+    
    
 
     /* strart (قالو عن فاتورة)  */
@@ -544,10 +621,7 @@ font-size: 20px;
         max-width: 100%;
         margin-right: auto;
         margin-left: auto;
-        border-radius: 0px 30px 0px 30px;
-        
-        
-        
+        border-radius: 0px 30px 0px 30px;  
        
     }
 
@@ -758,6 +832,8 @@ padding-bottom: 50px;
     font-size: 50px;
     color:#009688;
     position: relative; 
+    width: max-content;
+    margin: 0 auto;
     
 }
 
@@ -766,10 +842,12 @@ padding-bottom: 50px;
    position: absolute; 
    content: "";
    background-color: #8e8e8e;
-   width: 100px;
+   width: 100%;
    height: 1px;
    bottom: 18px;
-   left: 125px;
+   left: 0;
+   right: 0;
+   
 }
 
 .check-div{
@@ -790,6 +868,8 @@ padding-bottom: 50px;
 }
 .check-div h6 a{
    position: relative;
+   width: max-content;
+   margin: 0 auto;
     
 }
 
@@ -797,10 +877,12 @@ padding-bottom: 50px;
     position: absolute; 
     content: "";
     background-color: #8e8e8e;
-    width: 60px;
+    width: 100%;
     height: 1px;
     bottom: -3px;
-    left: 150px;
+
+    
+  
      
  }
 
@@ -829,7 +911,9 @@ padding-bottom: 50px;
     padding-bottom: 20px;
     font-size: 50px;
     color:#009688;
-    position: relative; 
+    position: relative;
+    width: max-content; 
+    margin: 0 auto;
     
 }
 
@@ -838,10 +922,12 @@ padding-bottom: 50px;
    position: absolute; 
    content: "";
    background-color: #8e8e8e;
-   width: 60px;
+   width: 100%;
    height: 1px;
    bottom: 20px;
-   left: 145px;
+   left: 0;
+   right: 0;
+   
 }
 .money h1 span{
     
@@ -851,7 +937,7 @@ padding-bottom: 50px;
 
 .payment-way{
     position: absolute;
-    left: 60px;
+    left: 50px;
     top: 70px;
 }
 
@@ -917,6 +1003,11 @@ padding-bottom: 50px;
     padding-bottom: 50px;
   }
 
+  .parteners-content{
+    display: flex;
+    justify-content: space-between;
+  }
+
   .parteners h1{
     font-size: 32px;
     font-weight: 700;
@@ -944,6 +1035,7 @@ padding-bottom: 50px;
     background-image: linear-gradient(258deg,#5ac99d,#41979a);
     padding-bottom: 50px;
     padding-top: 50px; 
+    z-index: 20;
    
 
 }
@@ -972,19 +1064,945 @@ padding-bottom: 50px;
 }
 
 .svg-photo{
-    margin-top: -50px;
-    z-index: 70;
-    padding-left: ;
+    margin-top: -52px;
+    z-index: 5
+   
 }
 
 .svg-photo svg{
     width: 200px;
     max-width: 100%;
-    fill:black;
+    fill:#ffffff61; 
+
     
+}
+
+/* start footer  */
+
+.bg-footer{
+    background-color: #f5ffff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.logo img{
+    width: 150px;
+}
+
+.appliction-images{
+    display: flex;
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.appliction-images img{
+    width: 150px;
+    
+}
+
+.fatoria-payment{
+    padding-right: 70px;
+}
+
+.fatoria-payment h5{
+    padding-bottom: 15px;
+    color:#41979a;
+}
+
+.about-fatoria h5{
+    padding-bottom: 15px;
+    color:#41979a; 
+}
+
+.about-fatoria{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.element-about p{
+    padding-top: 15px;
+    
+}
+
+.element-about p a{
+    color: black;
+}
+
+.list li a{
+    color: black;
+}
+.image-div h5{
+    padding-bottom: 10px;
+    color:#41979a;
+}
+.image-div img{
+    width: 100%;
+}
+
+.modaona h5{
+    padding-bottom: 10px;
+    color:#41979a;
+}
+
+.lap-photo{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.lap-photo img{
+    width: 80px;
+    height: 70px;
+}
+
+.lap-photo a span{
+    padding-right: 15px;
+    color: black;
+}
+
+.social-icons-div h5{
+    padding-bottom: 10px;
+    color:#41979a;
+
+}
+
+.socail-icons {
+display: flex;
+gap: 25px;
+}
+
+.socail-icons a{
+font-size: 25px;
+color:#607d8b;
+transition: 1s;
+}
+.socail-icons a:hover{
+    color:#59c6ab;
+    transform: scale(1.1);
+}
+
+.footer-border{
+    border-bottom: 1px solid grey;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.footer-2 img{
+    width: 150px;
+}
+
+
+/* end footer  */
+
+
+@media(max-width:1400px){
+   
+    
+
+    .carousel-control-prev{
+       
+        left: 100px;
+         
+    }
+
+    .carousel-control-next{
+       
+        right: 100px;
+        
+    }
+
+    .images img{
+        width: 130px;
+        max-width: 100%;
+        
+        
+        
+      }
+
+}
+
+@media(max-width:1200px){
+   
+    
+     .carousel-control-prev{
+       
+        left: 20px;
+         
+    }
+
+    .carousel-control-next{
+       
+        right: 20px;
+        
+    }
+
+    .images img{
+        width: 110px;
+        max-width: 100%;
+        
+        
+        
+      }
+}
+
+@media(max-width:992px){
+
+    .main-contaner{
+
+        max-width: 100%;
+
+    }
+
+    .show-items{
+        position: unset;
+    }
+
+    .hide-dive{
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        top: 60px;
+    }
+
+    .nave-elemnt{
+        display: flex;
+        justify-content: space-around;
+        
+    }
+
+    
+    
+
+    .bar-button{
+        visibility: visible;
+    }
+
+    .nave-pages{
+        position: absolute;
+        display: flex;
+        background-color:#effcfb;
+        color: white;
+        flex-direction: column;
+        top: 58px;
+        z-index: 90;
+        width: 100%;
+        left: 0px;
+        right: 0px;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        text-align: center;
+        transform: translateX(100%);
+        transition: 1s;
+        opacity: 0;
+        visibility:hidden;
+
+
+}
+
+
+
+
+
+.carousel-control-prev{
+       
+    left: -50px;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+}
+
+.carousel-control-next{
+   
+    right: -50px;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    
+} 
+
+.fatoria-photoe{
+    margin-top: -270px;
+}
+
+.video{
+    position: absolute;
+    margin-top: -200px; 
+    z-index: 60;
+    left: 0;
+    right: 0;
+    margin: a;
+     
+}
+
+.parteners-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+  }
+
+  .titel-button h1{
+    font-size: 26px;
+    color: white;
+    
+}
+
+
+   
+}
 
 
     
+
+
+@media(max-width:800px){
+
+    .fatoria-photoe{
+        margin-top: -220px;
+    }
+
+    .video{
+        position: absolute;
+        margin-top: -180px; 
+        z-index: 60;
+        left: 0;
+        right: 0;
+        margin: a;
+         
+    }
+
+    .women-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 50px;
+    }
+
+    .googal-logo{
+     
+        width: 480px;
+        max-width: 100%;
+       
+       
+    }
+
+
+    .content-carsoual{
+       
+        width: 480px;
+        max-width: 100%;
+       
+    }
+    
+
+    .carousel-control-prev{
+       
+        left: -30px;
+
+        height: 32px;
+        width: 32px;
+        border-radius: 32px;
+     
+    }
+
+    
+    .carousel-control-next{
+       
+        right: -30px;
+
+        height: 32px;
+        width: 32px;
+        border-radius: 32px; 
+        
+    } 
+
+    .free{
+        display: flex;
+    }
+
+
+    .number h1{
+        font-size: 50px;
+        padding-bottom: 50px;
+        padding-right: 50px;
+       
+       }
+    
+       .customer-opinion h1{
+        padding-right: 80px;
+       }
+    
+       .customer-opinion h1{
+        font-size: 40px;
+       
+       }
+    
+       .customer-opinion h1::after{
+       
+        width: 4px;
+        height: 100%;
+        top: -30px;
+        right: 30px;
+        
+       }
+    
+        .arrow-image img{
+            width: 400px;
+    
+        }
+    
+        .arrow-image{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    
+    .elemnt-in-carsoual h1{
+        font-size: 40px;
+    }
+
+    .elemnt-in-carsoual p{
+        font-size: 16px;
+    }
+
+    .elemnt-in-carsoual{
+        padding-left: 11px;
+        padding-right: 11px;
+    }
+
+    .parteners h1{
+        font-size: 30px;
+    }
+
+
+    .images img{
+        width: 70px;
+        max-width: 100%;
+        
+        
+       
+      } 
+
+      .money{
+        margin-top: 20px;
+      }
+
+
+      .titel-button h1{
+        font-size: 20px;
+        color: white;
+        
+    }
+
+
+    .clicker{
+      
+        width: 170px;
+        font-size: 16px;
+      
+    }
+     
+
+   
+}
+
+
+
+@media(max-width:600px){
+   
+    .googal-logo{
+     
+        width: 460px;
+        max-width: 100%;
+       
+       
+    }
+   
+    .content-carsoual{
+       
+        width: 460px;
+        max-width: 100%;
+       
+    }
+
+    .carousel-control-prev{
+       
+        left: -30px;
+
+        height: 32px;
+        width: 32px;
+        border-radius: 32px;
+     
+    }
+
+    
+    .carousel-control-next{
+       
+        right: -30px;
+
+        height: 32px;
+        width: 32px;
+        border-radius: 32px; 
+        
+    } 
+
+    .elemnt-in-carsoual{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+}
+
+
+@media(max-width:576px){
+    
+
+    .nave-logo img{
+        width:100px;
+        min-width: 100px;
+    }
+
+
+    .bar-button{
+        color: white;
+        font-size: 25px;
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+        
+    }
+
+    .hide-dive .image{
+        display: none;
+    }
+
+    .money{
+
+        margin-top: 15px;
+    }
+
+    .titel-number{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .number h1{
+        font-size: 50px;
+       }
+    
+       .customer-opinion h1{
+        padding-right: 80px;
+       }
+    
+       .customer-opinion h1{
+        font-size: 25px;
+        
+        
+        
+       
+       }
+    
+       .customer-opinion h1::after{
+       display: none;
+       
+        
+       }
+    
+        .arrow-image img{
+            width: 250px;
+    
+        }
+    
+        .arrow-image{
+            position: absolute;
+            top: 100px;
+            right: 30px;
+        }
+
+        .googal-logo{
+     
+            width: 400px;
+            max-width: 100%;
+           
+           
+        }
+
+        .content-carsoual{
+       
+            width: 400px;
+            max-width: 100%;
+           
+        }
+
+        .carousel-control-prev{
+       
+            left: -10px;
+    
+            height: 32px;
+            width: 32px;
+            border-radius: 32px;
+         
+        }
+    
+        
+        .carousel-control-next{
+           
+            right: -10px;
+    
+            height: 32px;
+            width: 32px;
+            border-radius: 32px; 
+            
+        } 
+
+        .elemnt-in-carsoual{
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+
+
+     .tow-logos img{
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+          
+    }
+    .rate img{
+        width: 100px;
+        height: 20px;
+        max-width: 100%;
+    }
+
+    .titling h1{
+        font-size: 40px;
+    }
+
+    .trust-image img{
+        width: 550px;
+        max-width: 100%;
+    }
+
+    .clicker{
+        
+        width: 200px;
+         max-width: max-content;
+        font-size: 20px;
+       
+    
+    }
+
+    .details p{
+        font-size: 13px;
+    } 
+
+
+    .svg-photo svg{
+        width: 140px;
+        max-width: 100%;
+        fill:white;   
+        
+    }
     
     
+   
+}
+
+
+
+
+@media(max-width:500px){
+    .div-video{
+
+      height: 300px;
+     
+    }
+
+    .how-to-use{
+        
+        width: 400px;
+        max-width: 100%;
+       
+        
+    }
+    
+    .how-to-use h1{
+      padding-bottom: 20px;  
+      font-size: 24px;
+    }
+    
+    .how-to-use p{
+        font-size: 11px; 
+        line-height: 30px;
+      }
+
+      .left-side{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        text-align: center;
+    }
+    .number h1{
+        font-size: 40px;
+        
+        
+       }
+
+ 
+
+       
+}
+
+
+
+@media(max-width:450px){
+
+  
+    .nave-logo img{
+        width:80px;
+        min-width: 80px;
+    }
+
+
+    .bar-button{
+        color: white;
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+        
+    }  
+   
+
+    .left-side{
+    
+        gap: 8px;
+       
+    }
+    
+    .left-side h6{
+      
+        font-size: 13px;
+    }
+    
+    
+    .click{
+    
+        width: 95px;
+        height: 38px;
+        font-size: 3px;
+        max-width: 100%;
+        
+        
+        
+    }
+    
+    .left-side p{
+   
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    
+    
+    }
+
+    .googal-logo{
+        display: flex;
+        gap: 25px;
+        width: 250px;
+        max-width: 100%;
+       
+       
+    }
+
+    
+
+    .content-carsoual{
+       
+        width: 250px;
+        max-width: 100%;
+       
+    }
+
+
+    .carousel-control-prev{
+       
+        left: -10px;
+
+        height: 30px;
+        width: 30px;
+        border-radius: 30px;
+     
+    }
+
+    
+    .carousel-control-next{
+       
+        right: -10px;
+
+        height: 30px;
+        width: 30px;
+        border-radius: 30px; 
+        
+    } 
+
+    .tow-logos img{
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+          
+    } 
+
+    .googal-imge{
+        border-radius: 0px 30px 0px 30px; 
+       width: 120px;
+       height: 70px;
+       max-width: 100%;
+    } 
+    
+    .rate img{
+        width: 60px;
+        height: 20px;
+        max-width: 100%;
+    }
+
+    .elemnt-in-carsoual h1{
+        font-size: 25px;
+    }
+
+    .elemnt-in-carsoual p{
+        font-size: 10px;
+    }
+
+    .khnow-button{
+        width: 80px;
+        height: 30px;
+        width: max-content;
+        
+        font-size: 15px;
+    }
+    
+    .khnow-button span{
+        width: 19px;
+        height: 17px;
+        border-radius: 18px;
+        font-size: 13px;
+        
+    }
+
+    .titling h1{
+        font-size: 30px;
+    }
+
+    .titling p{
+        font-size: 15px;
+    }
+
+    .trust-image img{
+        width: 400px;
+        max-width: 100%;
+    }
+
+    .clicker{
+        
+        width: 150px;
+         max-width: max-content;
+        font-size: 13px;
+       
+    
+    }
+
+    .clicker span{
+        background-color: #41979a;
+        width: 20px;
+        height: 20px;
+        border-radius: 32px;
+        min-width: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white; 
+    }
+
+    .parteners h1{
+        font-size: 20px;
+    } 
+
+
+.images img{
+        width: 60px;
+        max-width: 100%;
+        
+        
+       
+      } 
+
+      .titel-button h1{
+        font-size: 16px;
+        
+        
+    }
+
+
+    .clicker{
+      
+        width: 130px;
+        font-size: 10px;
+      
+    }
+
+ 
+
+}
+
+@media(max-width:320px){
+    .nave-logo img{
+        width:20px;
+        
+    }
+
+
+    .bar-button{
+        color: white;
+        font-size: 15px;
+        width: 25px;
+        height: 25px;
+        border-radius: 10px;
+        
+    }  
+
+    
+    
+    
+    
+}
+
+.hide-show{
+    display: flex;
+
+}
+
+.hide-show.nave-pages {
+    transform: translateX(0);
+    opacity: 1;
+    visibility:visible;
 }
